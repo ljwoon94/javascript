@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>배열로 구구단 찍기</title>
+</head>
+<body>
+    <h1>객체로 구구단 찍기</h1>
+    <script>
+        gugudan = {};
+        //객체 생성
+        gugudan.result=[];
+        //객체의 배열 생성
+        gugudan.current = 0;
+        gugudan.calculate = function(n){
+            this.current = n;
+            for(var i = 0; i<9;i++){
+                this.result[i] = n * (i+1);
+            }
+        }
+
+        gugudan.print = function(){
+            document.write("<h2>"+this.current + "단</h2>");
+            for(var i=0; i<9; i++){
+                document.write(this.current  + "*" +(i+1)+"="+this.result[i]+ "<br>");
+            }
+        }
+        function main(){
+            for(var i =2; i<=9;i++){
+                gugudan.calculate(i);
+                gugudan.print();
+            }
+        }
+        main();
+    </script>
+</body>
+</html>
