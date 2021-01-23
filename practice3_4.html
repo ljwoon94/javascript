@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    숫자를 입력해주세요. <input type="text" id="num">
+                        <button onclick="gugudan()">계산</button> 
+    <script>
+        function gugudan(){
+            var n = document.getElementById("num").value;
+            for(j=1;j<=9;j++){
+                document.write( n+"*"+j +"="+n* j+" <br>");
+
+            }
+        }
+        
+    
+  
+    </script>  
+</body>
+</html>
