@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 예제</title>
+</head>
+<body>
+    <!--  -->
+    <script>
+        var Food = function(name, energy){
+            this.name = name;
+            this.energy = energy;
+            this.feed = function(human){
+                human.hp += this.energy;
+            }
+        }
+
+        var Human = function(name, hp){ 
+            this.name = name;
+            this.hp = hp;
+            this.show = function(){
+                document.write(this.name+ "의 에너지는 "+this.hp +"이다.");
+            }
+        }
+
+        var food1 = new Food("도넛",200);
+        var human1 = new Human("이정운",1000);
+        food1.feed(human1);
+        human1.show();
+            
+    </script>
+</body>
+</html>
