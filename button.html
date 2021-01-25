@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 예제</title>
+</head>
+<body>
+    input text 와 button <br>
+    <input type="text" id="text"><br>
+    <button type="submit" id="btn" onclick="btn()">전송</button>
+    <script>
+        var btn = function(){
+            var text = document.getElementById("text");
+            //id가 text인 값을 text 변수에 저장
+            document.write(text.value);
+        }
+    </script>
+</body>
+</html>
