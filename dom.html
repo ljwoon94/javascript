@@ -8,5 +8,19 @@
 <body>
     <h2>Hello</h2>
     <script src = "dom_test.js"></script>
+    <h2>Hello2</h2>
+    <p id="main">p태그</p>
+    <script>
+        var a = document.getElementsByTagName("h2");
+        //html에 태그네임을 자바스크립트로 가져옴.
+        console.log(a[0]); // Hello
+        console.log(a[1]); // Hello2
+        a[0].innerHTML ="내용바꾸기"; // 태그안에 value 값이 바뀜.
+        a[1].innerHTML ="내용바꾸기2";
+        
+        var p = document.getElementById("main");
+        //id가 main 값을 가져옴
+        console.log(p);
+    </script>
 </body>
 </html>
