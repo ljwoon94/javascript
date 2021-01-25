@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>계산기 구현하기</h1>
+    숫자를 입력하세요. <br>
+    <input type="text" id="number1"><br>
+    기호를 입력하세요. (+,-,*,/) <br>
+    <input type="text" id="operators"><br>
+    숫자를 입력하세요. <br>
+    <input type="text" id="number2">
+    <button type="submit" id ="btn" onClick="main()">계산</button>
+    <script>
+        function calculate(operators,num1,num2){
+            var sum = 0;
+            switch (operators) {
+                case "+":
+                    sum = num1 + num2;
+                    break;
+                case "-":
+                    sum = num1 - num2;
+                    break;
+                case "*":
+                    sum = num1 * num2;
+                    break;
+                case "/":
+                    sum = num1 / num2;
+                    break;
+            }
+            document.write(sum);
+        }
+        function main(){
+            var number1 = document.getElementById("number1");
+            var number2 = document.getElementById("number2");
+            var num1 = Number(number1.value);
+            var num2 = Number(number2.value);
+            var operators = document.getElementById("operators");
+            var op = operators.value;
+            if(op==="+"||op==="-"||op==="*"||op==="/"){
+                calculate(op,num1,num2);
+            } else {
+                document.write("+,-,*,/ 중 하나를 입력하세요.");
+            }
+        }
+    </script>
+</body>
+</html>
