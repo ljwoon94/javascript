@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Web</title>
+  <style>
+    .box-container{
+      display: flex;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      background: rgba(255,255,0,0.7);
+    }
+    .box:hover{
+      /* hover는 마우스에 갖다대면 일어나는 변화 */
+      transform: scale(1.2) rotate(45deg);
+      /*scale()은 크기변화 1은 원본 2는 2배
+        rotate는 기울 45deg는 45도 회전
+        skew(35deg)는 35도 비틀기 평행 사변형 모양이된다.
+        skewY(35deg) 반대로 비틀어짐
+        Y만 붙에주면 방향이 바뀐다..
+        traelate(30px, 10px); 이동한다. 앞에껀 x축 이동 뒤에껀 y축 이동
+        transform-origin: left top; 기준점이동. 중간이었던 기준점이
+        왼쪽 윗쪽 10시방향이 기준점이 된다.퍼센트도 가능
+
+      */
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transform</h1>
+  <p>
+    asdfasdfasdfasdfadsfasdfadsfasdfadsfa
+  </p>
+  <div class="box-container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+  </div>
+  <p>
+    asdfasdfasdfasdfadsfasdfadsfasdfadsfa
+  </p>
+</body>
+</html>
