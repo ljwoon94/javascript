@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .characters {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: #fff000;
+        }
+        .ilbuni {
+            width: 100px;
+            cursor: pointer;
+        }
+        .characters .ilbuni {
+            display: inline-block;
+        }
+        .special {
+            border: 10px dashed red;
+        }
+    </style>
+    <!-- <script>
+      /*
+      $(function(){
+
+      });
+      제이쿼리 방식으로 'DOMContentLoaded'처럼 div가 로드되면 실행된다.
+      */
+      window.addEventListener('DOMContentLoaded', function(){
+        // window(전역객체)<- 문서전체를 나타냄. 문서전체가 로드되면 이벤트 추가
+        //'load'는 전체 문서가 로딩될때까지 기다리는거면
+        //'DOMContentLoaded' dom div만 로드되면 실행된다.
+        const ilbuni = document.querySelector('.ilbuni.c');
+        function clickInbuniHandler(){
+          ilbuni.classList.toggle('special');
+          //클래스 이름 추가
+        }
+        ilbuni.addEventListener('click',clickInbuniHandler);
+      });
+    </script> -->
+</head>
+<body>
+    <div class="characters">
+        <div class="ilbuni a">
+            <img src="images/ilbuni_0.png" alt="일분이">
+        </div>
+        <div class="ilbuni b">
+            <img src="images/ilbuni_1.png" alt="일분이">
+        </div>
+        <div class="ilbuni c">
+            <img src="images/ilbuni_2.png" alt="일분이">
+        </div>
+        <div class="ilbuni d">
+            <img src="images/ilbuni_3.png" alt="일분이">
+        </div>
+    </div>
+
+    <script>
+        /*
+          const ilbuni = document.querySelector('.ilbuni:nth-child(3)')
+          ilbuni.addEventListener(type, listener(함수), ?options)
+          ilbuni.addEventListener('click', function(){
+            ilbuni.classList.add('special');
+          })
+          ilbuni에게 이벤트 추가
+
+          const는 기본적으로 전역변수. javascirpt는 전역변수를 최소화해야한다.
+          그래서 함수안에 넣는다.
+        */
+        (function(){
+          const characters = document.querySelector('.characters');
+
+          function clickHandler(e){
+            console.log(e.currentTarget);
+            //e는 이벤트
+            //e.currentTaget과 this는 같다. 그래서 this를 자주 슴
+            //e.target은 진짜 클릭한 객체
+            //characters.classList.toggle('special');
+            //클래스 이름 추가
+          }
+          characters.addEventListener('click', clickHandler);
+        })();
+    </script>
+</body>
+</html>
