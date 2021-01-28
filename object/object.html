@@ -16,8 +16,24 @@
       console.log('안녕하세요. 저는 일분이고 나이는 10살이에요.');
     };
     person.introduce();
-     */
-    const person ={
+    */
+
+
+    //생성자는 앞에 대문자를 쓴다. 함수랑 구분하기 위해
+    function Person(name, age){
+      this.name = name;
+      this.age = age;
+      this.introduce = function(){
+          console.log('안녕하세요? 저는' +  this.name +'이고, 나이는 '+this.age+'살 입니다.')
+      }
+    }
+
+    // 인스턴스(new)
+    const person1 = new Person('일분이', 10);
+    const person2 = new Person('이분이', 8);
+
+    /*
+    const person1 ={
       name: '일분이',
       age: 10,
       introduce: function(){
@@ -31,8 +47,9 @@
         console.log('안녕하세요? 저는' + this.name +'이고, 나이는 '+this.age+'살 입니다.')
       }
     };
+    */
 
-    person.introduce();
+    person1.introduce();
     person2.introduce();
 
 
